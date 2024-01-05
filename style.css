@@ -1,0 +1,22 @@
+body{
+    background-color: #1090E9;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.img {
+    width: 50%;
+    float: left;
+}
+.navbar{
+    margin-bottom: 20px;
+}
+
+
+/* Responsive gambar */
+@media screen and (max-width: 767px) {
+    .img {
+        width: 100%;
+        float: none;
+    }
+}
