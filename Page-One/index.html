@@ -26,7 +26,7 @@
           <p class="text-center text-white">Simpan uang serta kartu debit/kredit dengan praktis dengan DANA</p>
           <p class="text-center text-white">Masukkan nomor HP kamu untuk lanjut</p>
           <!-- Form input nomor HP -->
-          <form action="" class="text-center">
+          <form action="" class="text-center" onsubmit="validateForm()">
             <div class="form-group">
               <input type="text" class="form-control" id="nomorHP" placeholder="Masukkan nomor HP" />
             </div>
@@ -35,10 +35,26 @@
         </div>
       </div>
     </div>
-    
+
     <!-- Include Bootstrap JS and Popper.js -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      function validateForm() {
+        var nomorHP = document.getElementById("nomorHP").value;
+
+        if (nomorHP === "") {
+          alert("Maaf, nomor tidak boleh kosong");
+          event.preventDefault();
+        } else if (!nomorHP.startsWith("08")) {
+          alert("Maaf, format yang anda masukkan salah");
+          event.preventDefault();
+        } else {
+          alert("Maaf, nomor yang anda masukkan salah");
+          event.preventDefault();
+        }
+      }
+    </script>
   </body>
 </html>
