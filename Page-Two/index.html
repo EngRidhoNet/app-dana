@@ -1,49 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DANA</title>
     <!-- Include Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- navbar-start -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand mx-auto" href="#">
-        <img src="img/logo.png" alt="Logo" height="30" class="d-inline-block align-top" />
-      </a>
+        <a class="navbar-brand" href="#">
+            <i class="fa-solid fa-angle-left warna-icon"></i>
+        </a>
+        <a class="navbar-brand mx-auto" href="#">
+            <img src="img/logo.png" alt="Logo" height="30" class="d-inline-block align-top" />
+        </a>
     </nav>
-    <!-- navbar-end -->
-    <!-- <div class="img">
-      <img src="img/bg.png" alt="img" width="100%" />
-    </div> -->
-    <!-- <div class="container mt-5">
-      <div class="row">
-        <div class="col-md-12">
-          <h2 class="text-center mt-5 text-white">Dompet digital untuk kamu!</h2>
-          <p class="text-center text-white">Simpan uang serta kartu debit/kredit dengan praktis dengan DANA</p>
-          <p class="text-center text-white">Masukkan nomor HP kamu untuk lanjut</p>
-          <!-- Form input nomor HP -->
-          <!-- <form action="" class="text-center">
-            <div class="form-group">
-              <input type="text" class="form-control" id="nomorHP" placeholder="Masukkan nomor HP" />
+
+    <!-- Heading -->
+    <h2 class="text-center mt-3" style="color: white;">Masukkan <B>PIN DANA</B></h2>
+
+    <!-- OTP Input -->
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-12">
+                <div class="otp-container d-flex justify-content-center">
+                    <input type="text" maxlength="1" id="otp-1" class="otp-input" oninput="focusNext(this)" />
+                    <input type="text" maxlength="1" id="otp-2" class="otp-input" oninput="focusNext(this)" />
+                    <input type="text" maxlength="1" id="otp-3" class="otp-input" oninput="focusNext(this)" />
+                    <input type="text" maxlength="1" id="otp-4" class="otp-input" oninput="focusNext(this)" />
+                    <input type="text" maxlength="1" id="otp-5" class="otp-input" oninput="focusNext(this)" />
+                    <input type="text" maxlength="1" id="otp-6" class="otp-input" oninput="focusNext(this)" />
+                </div>
             </div>
-            <button type="submit" class="btn btn-primary rounded">Lanjut</button>
-          </form>
         </div>
-      </div>
-    </div> --> 
-    <div class="container">
-      <input class="numpad-input" readonly /> <button class="numpad-btn">1</button> <button class="numpad-btn">2</button> <button class="numpad-btn">3</button> <button class="numpad-btn">4</button> <button class="numpad-btn">5</button>
-      <button class="numpad-btn">6</button> <button class="numpad-btn">7</button> <button class="numpad-btn">8</button> <button class="numpad-btn">9</button> <button class="numpad-btn">0</button> <button class="numpad-btn">*</button>
-      <button class="numpad-btn">#</button>
     </div>
 
+    <!-- Button Tampilkan -->
+    <div class="container">
+      <button class="primary-button mx-auto"><B>TAMPILKAN</B></button>
+    </div>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/3e2c450e53.js" crossorigin="anonymous"></script>
     <!-- Include Bootstrap JS and Popper.js -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </body>
+    <script src="main.js"></script>
+</body>
 </html>
